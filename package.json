@@ -1,20 +1,15 @@
 {
   "name": "voludyne",
   "version": "1.0.0",
-  "description": "3D Printer",
-  "main": "pitchdeck_nextjs.js",
+  "description": "3D Printer Pitchdeck",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Demolux/Voludyne.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Demolux/Voludyne/issues"
-  },
-  "homepage": "https://github.com/Demolux/Voludyne#readme"
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
