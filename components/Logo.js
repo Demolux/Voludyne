@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/voludyne-banner.svg'; // Passe deinen Pfad an
+import logo from '../public/voludyne-banner.svg'; // <-- passe den Pfad ggf. an!
 
 export default function Logo() {
   const [showLogo, setShowLogo] = useState(false);
@@ -9,25 +9,20 @@ export default function Logo() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = window.innerHeight * 0.5;
-      console.log(`scrollY: ${scrollY}, triggerPoint: ${triggerPoint}`); // ✅ Debug Ausgabe
-      if (scrollY > triggerPoint) {
+      console.log('scrollY:', scrollY);
+      if (scrollY > 100) { // 👉 Kleiner Wert zum Testen!
         setShowLogo(true);
       } else {
         setShowLogo(false);
       }
     };
 
-    // Sicherstellen dass Event existiert:
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // einmal initial aufrufen, falls schon gescrollt
+    handleScroll(); // Initial aufrufen
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ Statt null, testweise leeres Div:
-  if (!showLogo) {
-    return <div style={{ height: '60px', width: '60px' }} />;
-  }
+  if (!showLogo) return null; // Nur zeigen wenn scrollY > 100px
 
   return (
     <Link href="/" style={{ textDecoration: 'none' }}>
