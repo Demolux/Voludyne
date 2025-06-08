@@ -1,6 +1,6 @@
 // components/Banner.js
 import Image from 'next/image';
-import banner from '../public/voludyne-banner.svg'; // oder passe deinen Dateinamen an!
+import banner from '../public/voludyne-banner.png'; // oder passe deinen Dateinamen an!
 
 export default function Banner() {
   return (
