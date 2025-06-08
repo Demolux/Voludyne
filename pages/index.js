@@ -6,6 +6,8 @@ export default function Home() {
     <main>
       <SlideProblem />
       <SlideSolution />
+	  <SlideInnovation />
+	  <SlideTeam	  />
     </main>
   );
 }
