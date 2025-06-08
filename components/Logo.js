@@ -1,8 +1,24 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/voludyne-banner.svg';
+import logo from '../public/voludyne-logo.png'; // Passe den Pfad an
 
 export default function Logo() {
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const triggerPoint = window.innerHeight * 0.5; // halbe erste Folie
+      setShowLogo(scrollY > triggerPoint);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (!showLogo) return null; // 🚨 Logo wird nicht gerendert wenn nicht nötig!
+
   return (
     <Link href="/" style={{ textDecoration: 'none' }}>
       <div style={{
@@ -25,7 +41,7 @@ export default function Logo() {
           <Image
             src={logo}
             alt="Voludyne Logo"
-            height={60}  // Nur Höhe fixiert, Breite automatisch
+            height={60}
             style={{ width: 'auto', height: '100%' }}
             priority
           />

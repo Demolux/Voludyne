@@ -1,7 +1,7 @@
 // components/Banner.js
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import banner from '../public/voludyne-banner.svg'; // Passe den Dateinamen an!
+import banner from '../public/voludyne-banner.png'; // Passe den Dateinamen an!
 
 export default function Banner() {
   const [visible, setVisible] = useState(false);
