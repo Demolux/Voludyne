@@ -1,29 +1,8 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/voludyne-banner.svg'; // <-- passe den Pfad ggf. an!
+import logo from '../public/voludyne-banner.svg'; // Passe den Pfad an!
 
 export default function Logo() {
-  const [showLogo, setShowLogo] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      console.log('scrollY:', scrollY);
-      if (scrollY > 100) { // 👉 Kleiner Wert zum Testen!
-        setShowLogo(true);
-      } else {
-        setShowLogo(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial aufrufen
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  if (!showLogo) return null; // Nur zeigen wenn scrollY > 100px
-
   return (
     <Link href="/" style={{ textDecoration: 'none' }}>
       <div style={{
