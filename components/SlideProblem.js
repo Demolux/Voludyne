@@ -11,7 +11,6 @@ export default function SlideProblem() {
       padding: '4rem',
       textAlign: 'center',
     }}>
-      {/* Banner-Komponente */}
       <Banner />
 
       <h1>🚩 Problem am Markt</h1>
