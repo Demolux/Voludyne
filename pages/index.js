@@ -7,7 +7,8 @@ export default function Home() {
       <SlideProblem />
       <SlideSolution />
 	  <SlideInnovation />
-	  <SlideTeam	  />
+	  <SlideTeam />
+	  <SlideVision />
     </main>
   );
 }
