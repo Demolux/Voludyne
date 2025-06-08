@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/voludyne-logo.png'; // Passe den Pfad an
+import logo from '../public/voludyne-banner.svg'; // Passe den Pfad an
 
 export default function Logo() {
   const [showLogo, setShowLogo] = useState(false);
