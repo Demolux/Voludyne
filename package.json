@@ -1,0 +1,20 @@
+{
+  "name": "voludyne",
+  "version": "1.0.0",
+  "description": "3D Printer",
+  "main": "pitchdeck_nextjs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demolux/Voludyne.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Demolux/Voludyne/issues"
+  },
+  "homepage": "https://github.com/Demolux/Voludyne#readme"
+}
