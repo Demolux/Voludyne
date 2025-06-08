@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/voludyne-banner.svg'; // Passe den Pfad an
+import logo from '../public/voludyne-banner.svg'; // Passe deinen Pfad an
 
 export default function Logo() {
   const [showLogo, setShowLogo] = useState(false);
@@ -9,15 +9,25 @@ export default function Logo() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = window.innerHeight * 0.5; // halbe erste Folie
-      setShowLogo(scrollY > triggerPoint);
+      const triggerPoint = window.innerHeight * 0.5;
+      console.log(`scrollY: ${scrollY}, triggerPoint: ${triggerPoint}`); // ✅ Debug Ausgabe
+      if (scrollY > triggerPoint) {
+        setShowLogo(true);
+      } else {
+        setShowLogo(false);
+      }
     };
 
+    // Sicherstellen dass Event existiert:
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // einmal initial aufrufen, falls schon gescrollt
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (!showLogo) return null; // 🚨 Logo wird nicht gerendert wenn nicht nötig!
+  // ✅ Statt null, testweise leeres Div:
+  if (!showLogo) {
+    return <div style={{ height: '60px', width: '60px' }} />;
+  }
 
   return (
     <Link href="/" style={{ textDecoration: 'none' }}>
