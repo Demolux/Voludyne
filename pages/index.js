@@ -1,3 +1,4 @@
+import SlideIntro from '../components/SlideIntro';
 import SlideProblem from '../components/SlideProblem';
 import SlideSolution from '../components/SlideSolution';
 import SlideInnovation from '../components/SlideInnovation';
@@ -15,6 +16,7 @@ export default function Home() {
 		}}>
       <Logo />
 	  <ScrollProgress />
+	  <SlideIntro /> 
       <SlideProblem />
       <SlideSolution />
       <SlideInnovation />
