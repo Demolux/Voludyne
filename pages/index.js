@@ -1,6 +1,6 @@
-import SlideProblem from '@/components/SlideProblem';
-import SlideSolution from '@/components/SlideSolution';
-import SlideComparison from '@/components/SlideComparison';
+import SlideProblem from '../components/SlideProblem';
+import SlideSolution from '../components/SlideSolution';
+import SlideComparison from '../components/SlideComparison';
 
 export default function Home() {
   return (
