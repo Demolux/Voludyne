@@ -1,27 +1,21 @@
-import SlideIntro from '../components/SlideIntro';
-import SlideProblem from '../components/SlideProblem';
-import SlideSolution from '../components/SlideSolution';
-import SlideInnovation from '../components/SlideInnovation';
-import SlideTeam from '../components/SlideTeam';
-import SlideVision from '../components/SlideVision';
-import Logo from '../components/Logo';
-import ScrollProgress from '../components/ScrollProgress';
+import SlideProblem from '@/components/SlideProblem';
+import SlideSolution from '@/components/SlideSolution';
+import SlideComparison from '@/components/SlideComparison';
 
 export default function Home() {
   return (
     <main style={{
-		  height: '100vh',
-		  overflowY: 'scroll',
-		  scrollSnapType: 'y mandatory',
-		}}>
+      height: '100vh',
+      overflowY: 'scroll',
+      scrollSnapType: 'y mandatory',
+    }}>
       <Logo />
-	  <SlideIntro /> 
+      <ScrollProgress />
+      <SlideIntro />
       <SlideProblem />
       <SlideSolution />
-      <SlideInnovation />
-      <SlideTeam />
-      <SlideVision />
+      <SlideComparison />
+      {/* weitere Slides folgen */}
     </main>
   );
 }
-
