@@ -15,22 +15,15 @@ export default function SlideIntro() {
     }}>
       {/* Background Video */}
       <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: 0,
-        }}
-        src="/intro-video.mp4"
-        type="video/mp4"
-      />
+		  autoPlay
+		  muted
+		  loop
+		  playsInline
+		  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+		>
+		  <source src="/intro-video.mp4" type="video/mp4" />
+		</video>
+
 
       {/* Banner Logo */}
       <div style={{
