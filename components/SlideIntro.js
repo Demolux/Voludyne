@@ -34,7 +34,7 @@ export default function SlideIntro() {
       {/* Titel-Overlay */}
       <div className="intro-title">
         <h1>VOLUDYNE</h1>
-        <p>High-Speed 3D Printing. Reinvented.</p>
+        <p>Large Format X High Speed 3D Printing</p>
       </div>
 
       {/* Scroll Down Indicator */}
