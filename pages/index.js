@@ -15,7 +15,6 @@ export default function Home() {
 		  scrollSnapType: 'y mandatory',
 		}}>
       <Logo />
-	  <ScrollProgress />
 	  <SlideIntro /> 
       <SlideProblem />
       <SlideSolution />
