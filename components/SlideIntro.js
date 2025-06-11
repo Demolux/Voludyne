@@ -47,22 +47,21 @@ export default function SlideIntro() {
         />
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div style={{
-        position: 'absolute',
-        bottom: '2rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: 2,
-        textAlign: 'center',
-        color: 'white',
-        fontSize: '1.2rem',
-        animation: 'bounce 2s infinite',
-        fontFamily: "'Share Tech Mono', monospace",
-      }}>
-        <div style={{ fontSize: '2rem' }}>↓</div>
-        <div>Scroll down</div>
-      </div>
+      {/* Scroll Down Testindikator */}
+		<div style={{
+		  position: 'absolute',
+		  bottom: '2rem',
+		  left: '50%',
+		  transform: 'translateX(-50%)',
+		  zIndex: 10000,
+		  textAlign: 'center',
+		  color: 'red',
+		  backgroundColor: 'white',
+		  padding: '1rem',
+		  fontSize: '1.5rem',
+		}}>
+		  👇 SCROLL
+		</div>
     </section>
   );
 }

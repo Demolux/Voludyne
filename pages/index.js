@@ -8,7 +8,11 @@ import ScrollProgress from '../components/ScrollProgress';
 
 export default function Home() {
   return (
-    <main>
+    <main style={{
+		  height: '100vh',
+		  overflowY: 'scroll',
+		  scrollSnapType: 'y mandatory',
+		}}>
       <Logo />
 	  <ScrollProgress />
       <SlideProblem />
