@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import introBanner from '../public/voludyne-banner.svg';
-import introVideo from '../public/intro-video.mp4';
 
 export default function SlideIntro() {
   return (
@@ -15,15 +14,14 @@ export default function SlideIntro() {
     }}>
       {/* Background Video */}
       <video
-		  autoPlay
-		  muted
-		  loop
-		  playsInline
-		  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-		>
-		  <source src="/intro-video.mp4" type="video/mp4" />
-		</video>
-
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      >
+        <source src="/intro-video.mp4" type="video/mp4" />
+      </video>
 
       {/* Banner Logo */}
       <div style={{
@@ -40,21 +38,21 @@ export default function SlideIntro() {
         />
       </div>
 
-      {/* Scroll Down Testindikator */}
-		<div style={{
-		  position: 'absolute',
-		  bottom: '2rem',
-		  left: '50%',
-		  transform: 'translateX(-50%)',
-		  zIndex: 10000,
-		  textAlign: 'center',
-		  color: 'red',
-		  backgroundColor: 'white',
-		  padding: '1rem',
-		  fontSize: '1.5rem',
-		}}>
-		  👇 SCROLL
-		</div>
+      {/* Scroll Down Indicator */}
+      <div style={{
+        position: 'absolute',
+        bottom: '2rem',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 10000,
+        textAlign: 'center',
+        color: 'red',
+        backgroundColor: 'white',
+        padding: '1rem',
+        fontSize: '1.5rem',
+      }}>
+        👇 SCROLL
+      </div>
     </section>
   );
 }
