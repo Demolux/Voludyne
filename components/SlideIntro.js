@@ -23,36 +23,36 @@ export default function SlideIntro() {
         <source src="/intro-video.mp4" type="video/mp4" />
       </video>
 
-      {/* Banner Logo */}
-      <div style={{
-        position: 'relative',
-        zIndex: 1,
-        textAlign: 'center',
-      }}>
-        <Image
-          src={introBanner}
-          alt="Voludyne Banner"
-          height={150}
-          style={{ width: 'auto', height: '150px' }}
-          priority
-        />
-      </div>
-
       {/* Scroll Down Indicator */}
-      <div style={{
-        position: 'absolute',
-        bottom: '2rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: 10000,
-        textAlign: 'center',
-        color: 'red',
-        backgroundColor: 'white',
-        padding: '1rem',
-        fontSize: '1.5rem',
-      }}>
-        👇 SCROLL
-      </div>
+      <style jsx>{`
+		  .scroll-indicator {
+			position: absolute;
+			bottom: 2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 10000;
+			font-size: 2rem;
+			animation: bounce 2s infinite;
+			color: white;
+			opacity: 0.8;
+			text-shadow: 0 0 10px rgba(255,255,255,0.5);
+			transition: opacity 0.3s;
+		  }
+
+		  @keyframes bounce {
+			0%, 100% { transform: translate(-50%, 0); }
+			50% { transform: translate(-50%, 10px); }
+		  }
+
+		  .scroll-indicator:hover {
+			opacity: 1;
+		  }
+		`}</style>
+
+		<div className="scroll-indicator">
+		  ⬇
+		</div>
+
     </section>
   );
 }
